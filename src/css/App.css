@@ -98,23 +98,26 @@
 
 
 body {
-  min-height: 100vh;                   
+  height: auto;
+  min-height: 100vh;
   width: 100%;
-  display: flex;                       
-  flex-direction: column;              
+  display: flex;
+  flex-direction: column;
   background-image: url('../img/flores.jpeg');
-  background-size: cover;              
-  background-position: center;
-  background-repeat: no-repeat;
+  background-size: cover;         
+  background-position: top center; 
+  background-repeat: repeat-y;     
+  background-attachment: fixed;  
   color: #a9a9a9;
 }
 
 .main {
-  flex: 1;                             /* ocupa el espacio entre header y footer */
+  flex: 1;                             
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  min-height: 100vh;
 }
 
 /* .main{

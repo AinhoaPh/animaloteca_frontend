@@ -112,7 +112,7 @@ const Protectoras = () => {
             <option value="Madrid">Madrid</option>
             <option value="Valencia">Valencia</option>
             <option value="Andalucía">Andalucía</option>
-            {/* Añade más si lo necesitas */}
+          
           </select>
 
           <select name="categoria" value={filtro.categoria} onChange={handleChange}>
@@ -120,7 +120,7 @@ const Protectoras = () => {
             <option value="Perros">Perros</option>
             <option value="Gatos">Gatos</option>
             <option value="Aves">Aves</option>
-            {/* Añade más si lo necesitas */}
+   
           </select>
         </section>
                 {/* Card */}

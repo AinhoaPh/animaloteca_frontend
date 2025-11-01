@@ -56,6 +56,7 @@ console.log("Respuesta recibida:", data);
             // Guardamos Protectoras e info de paginación
             setlistaRecetas(data.data);
             //setInfo(data.info);
+            
 
         } catch (error) {
             console.error('Tuvimos un error:', error);
@@ -118,14 +119,14 @@ console.log("Respuesta recibida:", data);
                     ))}
                 </div>
 
-                {/* <p>Total de Recetas: {info.count}</p> */}
+                <p>Total de Recetas: {info.count}</p> 
 
 
                 <button onClick={handlePrev}>Anterior</button>
 
                 <button onClick={handleNext}>Siguiente</button>
 
-                {/* <p>Total de páginas: {pagina}/{info.pages}</p> */}
+                <p>Total de páginas: {pagina}/{info.pages}</p> 
             </main>
         </>
     );

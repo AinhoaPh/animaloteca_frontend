@@ -23,7 +23,7 @@ function App() {
      <NavPathName/>
       </nav>
 
-      <main className="main-content">
+      <main className="main">
         <Routes>
           {/* Página principal redirige a Protectoras */}
           <Route path="/" element={<Protectoras />} />
