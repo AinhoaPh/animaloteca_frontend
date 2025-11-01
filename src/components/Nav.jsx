@@ -1,34 +1,38 @@
 import { NavLink } from "react-router";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 
 export const NavPathName = () => {
-  const { isLoggedIn, logout } = useContext(AuthContext);
+  const { isLoggedIn } = useContext(AuthContext);
+  const [menuOpen, setMenuOpen] = useState(false); // estado del toggle
+
+  const toggleMenu = () => setMenuOpen(!menuOpen); // alternar menú
 
   return (
-    
     <nav className="nav">
-    <ul className="nav__ul">
-      <li><NavLink to="/protectoras" className="nav__links">Protectoras</NavLink></li>
-      <li><NavLink to="/recetas" className="nav__links">Recetas</NavLink></li>
-      <li><NavLink to="/consejos" className="nav__links">Consejos</NavLink></li>
+      {/* Botón hamburguesa visible en móvil */}
+      <button className="nav__toggle" onClick={toggleMenu}>
+        ☰
+      </button>
 
-      {!isLoggedIn && (
-  <>
-    <li><NavLink to="/login" className="nav__links">Login</NavLink></li>
-    <li><NavLink to="/register" className="nav__links">Register</NavLink></li>
-  </>
-)}
+      <ul className={`nav__ul ${menuOpen ? "active" : ""}`}>
+        <li><NavLink to="/protectoras" className="nav__links" onClick={() => setMenuOpen(false)}>Protectoras</NavLink></li>
+        <li><NavLink to="/recetas" className="nav__links" onClick={() => setMenuOpen(false)}>Recetas</NavLink></li>
+        <li><NavLink to="/consejos" className="nav__links" onClick={() => setMenuOpen(false)}>Consejos</NavLink></li>
 
-{isLoggedIn && (
-  <>
-    <li><NavLink to="/perfil" className="nav__links">Perfil</NavLink></li>
+        {!isLoggedIn && (
+          <>
+            <li><NavLink to="/login" className="nav__links" onClick={() => setMenuOpen(false)}>Login</NavLink></li>
+            <li><NavLink to="/register" className="nav__links" onClick={() => setMenuOpen(false)}>Register</NavLink></li>
+          </>
+        )}
 
-  </>
-)}
-
-  
-    </ul>
+        {isLoggedIn && (
+          <>
+            <li><NavLink to="/perfil" className="nav__links" onClick={() => setMenuOpen(false)}>Perfil</NavLink></li>
+          </>
+        )}
+      </ul>
     </nav>
   );
 };
