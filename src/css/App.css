@@ -564,6 +564,14 @@ body {
       position: relative;
       z-index: 1;
    }
+
+  .nav {
+    position: relative;
+    width: 100%;
+  }
+
+  
+
   .nav__ul {
       display: none;
       background-color: #0c6a6b;
@@ -571,7 +579,16 @@ body {
 
   .nav__toggle {
       display: block;
-   
+      position: absolute;
+    right: 20px;
+    top: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2
+    
   }
 
   .nav__ul.active {
@@ -580,9 +597,10 @@ body {
       background-color: #0c6a6b;
       color: #fff;
       position: absolute;
-      z-index: 2;
+      z-index: 1;
       height: auto;
-      top: 100%;
+      top: 70px;
+      left:0;
       margin-bottom: 20px;
   }
 
