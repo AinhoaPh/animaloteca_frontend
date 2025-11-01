@@ -52,17 +52,17 @@ const Register = () => {
             <h3>Registrese</h3>
             <main className="main">
             <form className="form" onSubmit={handleSubmit}>
-                <div>
+            <div>
                     <label htmlFor="user">Email</label>
-                    <input type="email" id="user" name="email" required />
+                    <input type="email" id="user" name="email" placeholder=" Usuario@ejemplo.es"required />
                 </div>
                 <div>
                     <label htmlFor="pass">Contraseña</label>
-                    <input type="password" id="pass" name="password" required />
+                    <input type="password" id="pass" name="password" placeholder="  ****** "required />
                 </div>
                 <div>
                     <label htmlFor="name">Nombre</label>
-                    <input type="text" id="name" name="name" required />
+                    <input type="text" id="name" name="name" placeholder=" Nombre Usuario " required />
                 </div>
                 <button type="submit">Enviar </button>
             </form>
