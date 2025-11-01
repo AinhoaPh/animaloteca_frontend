@@ -98,19 +98,23 @@
 
 
 body {
-  height: 100vh;
+  min-height: 100vh;                   
   width: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;                       
+  flex-direction: column;              
   background-image: url('../img/flores.jpeg');
-  overflow-y: auto;
-  background-size: 100vh;
+  background-size: cover;              
+  background-position: center;
+  background-repeat: no-repeat;
   color: #a9a9a9;
+}
 
-
-
-
-
+.main {
+  flex: 1;                             /* ocupa el espacio entre header y footer */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 /* .main{
@@ -551,16 +555,19 @@ body {
   }
 
   .nav__ul.active {
-      display: flex;
-      flex-direction: column;
-      background-color: #0c6a6b;
-      color: #fff;
-      position: absolute;
-      z-index: 1;
-      height: auto;
-      top: 70px;
-      left:0;
-      margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;                    
+    top: 70px;                           
+    left: 0;
+    width: 100%;                         
+    background-color: rgba(12, 106, 107, 0.97); 
+    color: #fff;
+    padding: 20px 0;
+    gap: 15px;
+    z-index: 2;
   }
 
   .card {
