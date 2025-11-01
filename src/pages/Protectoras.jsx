@@ -46,7 +46,7 @@ const Protectoras = () => {
                 }
             })
 
-            
+
             const response = await fetch(`${API}/protectoras?${params.toString()}`);
             // const response = await fetch(url);
 
@@ -59,7 +59,7 @@ const Protectoras = () => {
 
             // Guardamos Protectoras e info de paginación
             setListaProtectoras(data.data);
-            //setInfo(data.info);
+            setInfo(data.info);
 
         } catch (error) {
             console.error('Tuvimos un error:', error);
@@ -137,7 +137,7 @@ const Protectoras = () => {
 
                 <button onClick={handleNext}>Siguiente</button>
 
-                {/* <p>Total de páginas: {pagina}/{info.pages}</p> */}
+                <p>Total de páginas: {pagina}/{info.pages}</p>
             </main>
         </>
     );
