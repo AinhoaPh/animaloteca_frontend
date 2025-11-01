@@ -51,9 +51,11 @@ const Perfil = () => {
 
     return (
         <>
+        <main className="main">
           {user ?
               <div>
             <h2>Bienvenido {user.name} !</h2>
+           
             
           
             
@@ -63,13 +65,14 @@ const Perfil = () => {
                 </div> 
                 :
                 <p>Cargando usuario...</p>
+                
             }
       
       
  
 
             {error && <p className="text-red-400">{error}</p>}
-
+            </main>
         </>
     )
 }

@@ -56,20 +56,22 @@ const Login = () => {
     return (
         <>
             <h3>Inicie Sesión</h3>
+           <main className="main" >
             <form className="form" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="user">Email</label>
-                    <input type="email" id="user" name="email" required />
+                    <input type="email" id="user" name="email" placeholder="Escriba su email"required />
                 </div>
                 <div>
                     <label htmlFor="pass">Contraseña</label>
-                    <input type="password" id="pass" name="password" required />
+                    <input type="password" id="pass" name="password" placeholder="****"required />
                 </div>
 
                 <button type="submit">Acceder </button>
             </form>
 
             {error && <p className="text-red-400">{error}</p>}
+            </main> 
         </>)
 }
 export default Login;

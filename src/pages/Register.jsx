@@ -50,6 +50,7 @@ const Register = () => {
     return (
         <>
             <h3>Registrese</h3>
+            <main className="main">
             <form className="form" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="user">Email</label>
@@ -67,6 +68,7 @@ const Register = () => {
             </form>
 
             {error && <p className="text-red-400">{error}</p>}
+            </main>
         </>)
 }
 export default Register;
