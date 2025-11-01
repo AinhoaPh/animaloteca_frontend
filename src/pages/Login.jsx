@@ -56,7 +56,7 @@ const Login = () => {
     return (
         <>
             <h3>Inicie Sesión</h3>
-            <form onSubmit={handleSubmit}>
+            <form className="form" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="user">Email</label>
                     <input type="email" id="user" name="email" required />

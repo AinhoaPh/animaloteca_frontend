@@ -49,8 +49,8 @@ const Register = () => {
 
     return (
         <>
-            <h3>Estoy en Register </h3>
-            <form onSubmit={handleSubmit}>
+            <h3>Registrese</h3>
+            <form className="form" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="user">Email</label>
                     <input type="email" id="user" name="email" required />
