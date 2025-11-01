@@ -58,6 +58,7 @@ const Perfil = () => {
            
             
           
+          
             
                    
                     <p>Email: {user.email} !</p>

@@ -46,6 +46,7 @@ const Protectoras = () => {
                 }
             })
 
+            
             const response = await fetch(`${API}/protectoras?${params.toString()}`);
             // const response = await fetch(url);
 

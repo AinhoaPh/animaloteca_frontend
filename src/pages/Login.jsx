@@ -72,6 +72,7 @@ const Login = () => {
 
             {error && <p className="text-red-400">{error}</p>}
             </main> 
+            
         </>)
 }
 export default Login;
