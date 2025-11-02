@@ -4,6 +4,7 @@ import Consejos from "./pages/Consejos"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Perfil from "./pages/Perfil"
+import Inicio from "./pages/Inicio"
 
 import { Routes, Route, NavLink } from "react-router"
 import { PrivateRoute, GuestRoute } from "./components/PrivateRoute"
@@ -25,8 +26,9 @@ function App() {
 
       <main className="main">
         <Routes>
-          {/* Página principal redirige a Protectoras */}
-          <Route path="/" element={<Protectoras />} />
+         
+          <Route path="/" element={<Inicio />} />
+          <Route path="/inicio" element={<Inicio />} />
           <Route path="/protectoras" element={<Protectoras />} />
           <Route path="/recetas" element={<Recetas />} />
           <Route path="/consejos" element={<Consejos />} />

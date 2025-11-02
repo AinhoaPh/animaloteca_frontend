@@ -16,6 +16,7 @@ export const NavPathName = () => {
       </button>
 
       <ul className={`nav__ul ${menuOpen ? "active" : ""}`}>
+      <li><NavLink to="/inicio" className="nav__links" onClick={() => setMenuOpen(false)}>Inicio</NavLink></li>
         <li><NavLink to="/protectoras" className="nav__links" onClick={() => setMenuOpen(false)}>Protectoras</NavLink></li>
         <li><NavLink to="/recetas" className="nav__links" onClick={() => setMenuOpen(false)}>Recetas</NavLink></li>
         <li><NavLink to="/consejos" className="nav__links" onClick={() => setMenuOpen(false)}>Consejos</NavLink></li>
