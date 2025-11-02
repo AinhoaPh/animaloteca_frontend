@@ -571,6 +571,12 @@ body {
     z-index: 2
     
   }
+  .nav__links {
+    color: #1f9894;
+    font-size: 2rem;
+    text-decoration: none;
+    background-color: rgba(197, 229, 230, 0.97); 
+  }
 
   .nav__ul.active {
     display: flex;
@@ -581,7 +587,6 @@ body {
     top: 70px;                           
     left: 0;
     width: 100%;                         
-    background-color: rgba(197, 229, 230, 0.97); 
     color: #fff;
     padding: 20px 0;
     gap: 15px;
