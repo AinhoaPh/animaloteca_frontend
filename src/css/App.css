@@ -555,7 +555,7 @@ body {
 
   .nav__ul {
       display: none;
-    
+      background-color: #dcf7f7;
   }
 
   .nav__toggle {
@@ -576,7 +576,7 @@ body {
     color: #1f9894;
     font-size: 2rem;
     text-decoration: none;
-    background-color: rgba(207, 230, 231, 0.97); 
+    
   }
 
   .nav__ul.active {
